@@ -849,7 +849,7 @@ import skinTestData from "../data/skintest.json";
       };
 
       const response = await fetch(
-        `http://18.171.235.80:8082/api/v1/skin-test/answer`,
+        `http://localhost:8080/api/v1/skin-test/answer`,
         {
           method: "POST",
           headers: {
@@ -870,7 +870,7 @@ import skinTestData from "../data/skintest.json";
   async function calCulateResults() {
     try {
       const response = await fetch(
-        `http://18.171.235.80:8082/api/v1/skin-test/skin-size-score`,
+        `http://localhost:8080/api/v1/skin-test/skin-size-score`,
         {
           method: "GET",
           headers: {
@@ -910,7 +910,7 @@ import skinTestData from "../data/skintest.json";
     async function getSavedAnswers() {
       try {
         const response = await fetch(
-          `http://18.171.235.80:8082/api/v1/skin-test/saved-answers`,
+          `http://localhost:8080/api/v1/skin-test/saved-answers`,
           {
             method: "GET",
             headers: {
@@ -1050,7 +1050,7 @@ import skinTestData from "../data/skintest.json";
             password: "password",
         };
 
-        const response = await fetch(`http://18.171.235.80:8082/auth/generateToken`, {
+        const response = await fetch(`http://localhost:8080/auth/generateToken`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
